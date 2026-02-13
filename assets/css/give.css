@@ -1,0 +1,237 @@
+/* Scoped styles for Give Page */
+.give-page {
+    width: 100%;
+    font-family: "Jost", -apple-system, BlinkMacSystemFont, sans-serif;
+    color: #333;
+    background-color: #fff;
+}
+
+/* 1. Hero Section */
+.give-hero {
+    position: relative;
+    width: 100%;
+    height: 400px;
+    min-height: 380px;
+    background-image: url('../img/give-hero.jpg');
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}
+
+.give-hero-overlay {
+    position: absolute;
+    top: 0; left: 0; width: 100%; height: 100%;
+    background-color: rgba(154, 123, 47, 0.75); /* Warm gold overlay matches screenshot vibe */
+    z-index: 1;
+}
+
+.give-hero-content {
+    position: relative;
+    z-index: 2;
+    color: #fff;
+}
+
+.give-hero-content h1 {
+    font-size: 4rem;
+    font-weight: 800;
+    margin: 0;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+}
+
+/* 2. Split Section (Why We Give) */
+.give-split-section {
+    display: flex;
+    flex-wrap: wrap;
+    width: 100%;
+    min-height: 600px;
+}
+
+.give-split-image {
+    flex: 1;
+    min-width: 300px; /* Ensures it stacks on very small screens if needed, though media query handles main stack */
+    position: relative;
+}
+
+.give-split-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+}
+
+.give-split-content {
+    flex: 1;
+    min-width: 300px;
+    background-color: #000;
+    color: #fff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 60px 40px;
+}
+
+.give-content-wrapper {
+    max-width: 500px;
+}
+
+.give-split-content h2 {
+    font-size: 2.5rem;
+    font-weight: 700;
+    margin-bottom: 20px;
+    color: #fff;
+}
+
+.give-intro-text {
+    font-size: 1rem;
+    line-height: 1.6;
+    margin-bottom: 40px;
+    opacity: 0.9;
+}
+
+.give-list-item {
+    margin-bottom: 30px;
+}
+
+.give-list-item h3 {
+    font-size: 1.5rem;
+    font-weight: 700;
+    margin-bottom: 10px;
+    color: #fff;
+}
+
+.give-list-item p {
+    font-size: 0.95rem;
+    line-height: 1.5;
+    color: #ddd;
+    margin: 0;
+}
+
+.give-underline {
+    text-decoration: underline;
+    text-underline-offset: 4px;
+    color: #fff;
+    font-weight: 500;
+}
+
+/* 3. Ways to Give (Gold Section) */
+.give-ways-section {
+    background-color: #9a7b2f; /* Gold color from description */
+    padding: 80px 20px;
+    color: #fff;
+    text-align: center;
+}
+
+.give-container {
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.give-ways-heading {
+    font-size: 2.5rem;
+    font-weight: 700;
+    margin-bottom: 60px;
+    color: #fff;
+}
+
+.give-ways-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr); /* 2 columns on desktop */
+    gap: 60px 40px;
+    align-items: start;
+}
+
+.give-way-card {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+}
+
+.give-icon-wrapper {
+    height: 80px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 20px;
+}
+
+.give-icon-wrapper img {
+    max-height: 100%;
+    max-width: 200px;
+    object-fit: contain;
+    /* In case images are dark, we might need a background or filter, 
+       but assuming logos work on gold/dark bg based on request context. 
+       Adding a slight drop shadow just in case for visibility */
+    filter: drop-shadow(0 2px 4px rgba(0,0,0,0.1));
+}
+
+.give-way-card h3 {
+    font-size: 1.8rem;
+    font-weight: 700;
+    margin-bottom: 15px;
+    color: #fff;
+}
+
+.give-way-card p {
+    font-size: 1rem;
+    line-height: 1.5;
+    max-width: 300px;
+    margin: 0 auto 15px;
+    opacity: 0.9;
+}
+
+.give-btn-link {
+    display: inline-block;
+    padding: 8px 20px;
+    border: 1px solid rgba(255,255,255,0.5);
+    border-radius: 4px;
+    color: #fff;
+    text-decoration: none;
+    font-size: 0.9rem;
+    transition: all 0.2s ease;
+}
+
+.give-btn-link:hover {
+    background-color: rgba(255,255,255,0.1);
+    border-color: #fff;
+}
+
+/* Responsive Styles */
+@media (max-width: 900px) {
+    .give-split-section {
+        flex-direction: column;
+    }
+    
+    .give-split-image {
+        height: 300px; /* Fixed height for image when stacked */
+        flex: none;
+    }
+
+    .give-hero h1 {
+        font-size: 3rem;
+    }
+}
+
+@media (max-width: 768px) {
+    .give-ways-grid {
+        grid-template-columns: 1fr; /* Stack giving options on mobile */
+        gap: 50px;
+    }
+    
+    .give-ways-heading {
+        margin-bottom: 40px;
+    }
+
+    .give-split-content {
+        padding: 40px 20px;
+    }
+
+    .give-hero {
+        height: 300px;
+        min-height: auto;
+    }
+}

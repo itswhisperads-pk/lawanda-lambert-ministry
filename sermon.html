@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Sermon Detail | Transformation Church</title>
+  <link rel="stylesheet" href="/assets/css/theme.css">
+  <link rel="stylesheet" href="/assets/css/styles.css">
+</head>
+<body>
+  <div id="header-placeholder"></div>
+
+  <main>
+    <section class="page-content">
+      <div class="container" id="sermon-detail-container">
+        <p>Loading sermon...</p>
+      </div>
+    </section>
+  </main>
+
+  <div id="footer-placeholder"></div>
+
+  <script src="/assets/js/render.js"></script>
+  <script src="/assets/js/main.js"></script>
+  <script>
+    document.addEventListener('DOMContentLoaded', async () => {
+      const slug = Render.getQueryParam('slug');
+      const container = document.getElementById('sermon-detail-container');
+      
+      if (!slug) {
+        container.innerHTML = '<p>Sermon not found.</p>';
+        return;
+      }
+
+      const data = await Render.fetchData('sermons');
+      const sermon = data.sermons.find(s => s.slug === slug);
+
+      if (!sermon) {
+        container.innerHTML = '<p>Sermon not found.</p>';
+        return;
+      }
+
+      document.title = `${sermon.title} | Transformation Church`;
+
+      container.innerHTML = `
+        <div class="mb-2"><a href="/sermons.html">&larr; Back to Sermons</a></div>
+        <h1 class="mb-1">${sermon.title}</h1>
+        <p class="sermon-meta mb-2">Preached on ${Render.formatDate(sermon.dateISO)} by ${sermon.speaker}</p>
+        
+        <div style="background: #000; height: 400px; display: flex; align-items: center; justify-content: center; color: white; margin-bottom: 2rem;">
+            <!-- Placeholder for Video Embed -->
+            [Video Player Placeholder for ${sermon.title}]
+        </div>
+
+        <div class="content">
+            <p class="lead">${sermon.excerpt}</p>
+            <div class="mt-2">
+                <a href="${sermon.audioUrl}" class="btn btn-outline" style="color: var(--color-primary); border-color: var(--color-primary);">Download Audio</a>
+            </div>
+        </div>
+      `;
+    });
+  </script>
+</body>
+</html>

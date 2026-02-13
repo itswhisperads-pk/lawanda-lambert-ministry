@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Speaking Requests - Transformation Church</title>
+    <link rel="stylesheet" href="assets/css/styles.css">
+    <link rel="stylesheet" href="assets/css/speaking-requests.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Jost:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+</head>
+<body>
+
+    <div id="header-placeholder"></div>
+
+    <main class="speaking-page">
+        <!-- Hero Section -->
+        <section class="speaking-hero">
+            <div class="speaking-hero-overlay"></div>
+            <div class="speaking-hero-content">
+                <h1>Requests For Speaking Engagements</h1>
+                <p class="speaking-subtitle">Please complete the form below and our team will follow up.</p>
+            </div>
+        </section>
+
+        <!-- Form Section -->
+        <section class="speaking-form-section">
+            <div class="speaking-container">
+                <form action="#" method="POST" class="speaking-form">
+                    
+                    <!-- A) Basic Info -->
+                    <div class="speaking-grid-2col">
+                        <div class="speaking-form-group">
+                            <input type="text" name="firstName" placeholder="FIRST NAME" required class="speaking-input">
+                        </div>
+                        <div class="speaking-form-group">
+                            <input type="text" name="lastName" placeholder="LAST NAME" required class="speaking-input">
+                        </div>
+                        <div class="speaking-form-group">
+                            <input type="tel" name="phone" placeholder="PHONE" class="speaking-input">
+                        </div>
+                        <div class="speaking-form-group">
+                            <input type="email" name="email" placeholder="EMAIL ADDRESS" required class="speaking-input">
+                        </div>
+                        <div class="speaking-form-group">
+                            <input type="text" name="organization" placeholder="CHURCH/ORGANIZATION" class="speaking-input">
+                        </div>
+                        <div class="speaking-form-group">
+                            <input type="text" name="pastorName" placeholder="PASTOR'S NAME" class="speaking-input">
+                        </div>
+                    </div>
+
+                    <!-- B) Purpose of Event -->
+                    <div class="speaking-form-group speaking-checkbox-section">
+                        <label class="speaking-label">Purpose of Event</label>
+                        <div class="speaking-checkbox-group">
+                            <label class="speaking-checkbox-label">
+                                <input type="checkbox" name="purpose[]" value="Anniversary"> Anniversary
+                            </label>
+                            <label class="speaking-checkbox-label">
+                                <input type="checkbox" name="purpose[]" value="Revival"> Revival
+                            </label>
+                            <label class="speaking-checkbox-label">
+                                <input type="checkbox" name="purpose[]" value="Conference"> Conference
+                            </label>
+                            <label class="speaking-checkbox-label">
+                                <input type="checkbox" name="purpose[]" value="Other" id="check-purpose-other"> Other (Specify)
+                            </label>
+                        </div>
+                        <div id="field-purpose-other" class="speaking-conditional-field" style="display: none;">
+                            <input type="text" name="purposeOther" placeholder="PURPOSE OTHER" class="speaking-input">
+                        </div>
+                    </div>
+
+                    <!-- C) Number of Attendees -->
+                    <div class="speaking-form-group">
+                        <input type="number" name="attendees" placeholder="NUMBER OF ATTENDEES" min="1" class="speaking-input">
+                    </div>
+
+                    <!-- D) How did you hear -->
+                    <div class="speaking-form-group speaking-checkbox-section">
+                        <label class="speaking-label">How did you hear about Pastor LaWanda Peoples-Lambert?</label>
+                        <div class="speaking-hear-grid">
+                            <div class="speaking-checkbox-group">
+                                <label class="speaking-checkbox-label">
+                                    <input type="checkbox" name="heardFrom[]" value="Church Service"> Church Service
+                                </label>
+                                <label class="speaking-checkbox-label">
+                                    <input type="checkbox" name="heardFrom[]" value="Internet"> Internet
+                                </label>
+                                <label class="speaking-checkbox-label">
+                                    <input type="checkbox" name="heardFrom[]" value="Radio"> Radio
+                                </label>
+                                <label class="speaking-checkbox-label">
+                                    <input type="checkbox" name="heardFrom[]" value="TV"> TV
+                                </label>
+                                <label class="speaking-checkbox-label">
+                                    <input type="checkbox" name="heardFrom[]" value="Social Media"> Social Media
+                                </label>
+                                <label class="speaking-checkbox-label">
+                                    <input type="checkbox" name="heardFrom[]" value="Referral"> Referral
+                                </label>
+                                <label class="speaking-checkbox-label">
+                                    <input type="checkbox" name="heardFrom[]" value="Other" id="check-heard-other"> Other (Specify)
+                                </label>
+                            </div>
+                            <div id="field-heard-other" class="speaking-conditional-container" style="display: none;">
+                                <input type="text" name="heardOther" placeholder="IF OTHER PROVIDE RESPONSE." class="speaking-input">
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- E & F) Date/Time & Speaking Length -->
+                    <div class="speaking-grid-2col">
+                        <div class="speaking-form-group">
+                            <input type="datetime-local" name="eventDateTime" class="speaking-input speaking-input-date">
+                        </div>
+                        <div class="speaking-form-group">
+                            <input type="text" name="speakingLength" placeholder="HOW LONG WILL PASTOR LAMBERT HAVE TO SPEAK?" class="speaking-input">
+                        </div>
+                    </div>
+
+                    <!-- G & H) Website & Address -->
+                    <div class="speaking-grid-2col">
+                        <div class="speaking-form-group">
+                            <input type="url" name="website" placeholder="WEBSITE ADDRESS" class="speaking-input">
+                        </div>
+                        <div class="speaking-form-group">
+                            <input type="text" name="eventAddress" placeholder="ADDRESS OF SERVICE/EVENT" class="speaking-input">
+                        </div>
+                    </div>
+
+                    <!-- I) City/State -->
+                    <div class="speaking-form-group">
+                        <input type="text" name="eventCityState" placeholder="CITY/STATE OF SERVICE/EVENT" class="speaking-input">
+                    </div>
+
+                    <!-- J) Details -->
+                    <div class="speaking-form-group">
+                        <label class="speaking-label-text">PLEASE PROVIDE DETAILS YOU WOULD LIKE FOR PASTOR LAMBERT TO KNOW SUCH AS ATTIRE ETC. ABOUT THIS EVENT</label>
+                        <textarea name="details" rows="5" class="speaking-textarea"></textarea>
+                    </div>
+
+                    <!-- Submit -->
+                    <div class="speaking-submit-row">
+                        <button type="submit" class="speaking-btn-submit">SUBMIT</button>
+                    </div>
+
+                </form>
+            </div>
+        </section>
+    </main>
+
+    <div id="footer-placeholder"></div>
+
+    <script src="assets/js/main.js"></script>
+    <script src="assets/js/speaking-requests.js"></script>
+</body>
+</html>

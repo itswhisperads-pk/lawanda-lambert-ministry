@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>News | Transformation Church</title>
+  <link rel="stylesheet" href="/assets/css/theme.css">
+  <link rel="stylesheet" href="/assets/css/styles.css">
+</head>
+<body>
+  <div id="header-placeholder"></div>
+
+  <main>
+    <section>
+      <div class="container">
+        <h1 class="section-title">News</h1>
+        <div id="news-container">
+            <p>Loading news...</p>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <div id="footer-placeholder"></div>
+
+  <script src="/assets/js/render.js"></script>
+  <script src="/assets/js/main.js"></script>
+  <script>
+    document.addEventListener('DOMContentLoaded', async () => {
+        const data = await Render.fetchData('news');
+        const container = document.getElementById('news-container');
+        if(data && container) {
+            container.innerHTML = data.news.map(item => `
+                <div style="margin-bottom: 2rem; border-bottom: 1px solid #eee; padding-bottom: 1rem;">
+                    <h2>${item.title}</h2>
+                    <p style="color: #777; font-size: 0.9rem;">${Render.formatDate(item.dateISO)}</p>
+                    <p class="mt-2">${item.excerpt}</p>
+                </div>
+            `).join('');
+        }
+    });
+  </script>
+</body>
+</html>

@@ -1,0 +1,34 @@
+{
+  "sermons": [
+    {
+      "slug": "bright-lights",
+      "title": "Bright Lights",
+      "dateISO": "2026-02-08",
+      "speaker": "Pastor John Doe",
+      "excerpt": "Shining your light in a dark world.",
+      "videoUrl": "#",
+      "audioUrl": "#",
+      "image": "/assets/img/sermon-placeholder.svg"
+    },
+    {
+      "slug": "how-we-do-life-together",
+      "title": "How We Do Life Together",
+      "dateISO": "2026-02-01",
+      "speaker": "Pastor Jane Smith",
+      "excerpt": "The importance of community and fellowship.",
+      "videoUrl": "#",
+      "audioUrl": "#",
+      "image": "/assets/img/sermon-placeholder.svg"
+    },
+    {
+      "slug": "confession-and-community",
+      "title": "Confession & Community",
+      "dateISO": "2026-01-18",
+      "speaker": "Pastor John Doe",
+      "excerpt": "Healing through honesty and vulnerability.",
+      "videoUrl": "#",
+      "audioUrl": "#",
+      "image": "/assets/img/sermon-placeholder.svg"
+    }
+  ]
+}

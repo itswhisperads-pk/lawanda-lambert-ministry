@@ -1,0 +1,300 @@
+/* assets/css/about.css */
+
+/* Hero Section */
+.about-hero {
+    position: relative;
+    height: 40vh;
+    min-height: 300px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    color: var(--color-white, #fff);
+    background-image: url('../img/about-hero.jpg');
+    background-size: cover;
+    background-position: center;
+    background-color: var(--color-dark, #1a1a1a);
+    margin-top: 0;
+}
+
+.about-hero::before {
+    content: '';
+    position: absolute;
+    top: 0; left: 0; width: 100%; height: 100%;
+    background: rgba(0,0,0,0.5); /* Dark overlay */
+    z-index: 1;
+}
+
+.about-hero-content {
+    position: relative;
+    z-index: 2;
+    padding: 0 1rem;
+}
+
+.about-hero h1 {
+    font-size: clamp(2.5rem, 5vw, 4rem);
+    font-weight: 900;
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+    margin-bottom: 0.5rem;
+}
+
+.about-hero .subtitle {
+    font-size: clamp(1rem, 2vw, 1.5rem);
+    font-weight: 500;
+    opacity: 0.9;
+}
+
+/* Common Section Spacing */
+.about-section {
+    padding: 80px 0;
+}
+
+/* Intro Section */
+.about-intro {
+    background-color: #fff;
+}
+
+.about-intro-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 4rem;
+    align-items: center;
+    margin-bottom: 4rem;
+}
+
+.about-intro-img img {
+    width: 100%;
+    height: auto;
+    border-radius: 4px;
+    object-fit: cover;
+}
+
+.about-intro-text h2 {
+    font-size: 2rem;
+    margin-bottom: 1.5rem;
+    line-height: 1.2;
+}
+
+.about-intro-text p {
+    margin-bottom: 1.5rem;
+    color: var(--color-dark, #1a1a1a);
+    font-size: 1.1rem;
+    line-height: 1.6;
+}
+
+.about-beliefs {
+    text-align: center;
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.about-beliefs h3 {
+    color: var(--color-primary, #D4AF37);
+    text-transform: uppercase;
+    font-weight: 900;
+    margin-bottom: 1rem;
+}
+
+.about-beliefs-list {
+    text-align: left;
+    margin: 2rem auto;
+    display: inline-block;
+}
+
+.about-beliefs-list li {
+    margin-bottom: 0.5rem;
+    list-style: disc;
+}
+
+.about-beliefs-links {
+    margin: 1.5rem 0;
+    font-size: 0.9rem;
+    color: var(--color-primary, #D4AF37);
+    font-weight: 700;
+}
+
+.about-beliefs-links a:hover {
+    text-decoration: underline;
+}
+
+.about-denomination-logo {
+    max-height: 80px;
+    margin-top: 1rem;
+    opacity: 0.8;
+}
+
+/* Values & Vision Split Layout */
+.about-split-section {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    min-height: 600px;
+}
+
+.about-split-content {
+    padding: 4rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.about-split-media {
+    position: relative;
+    min-height: 300px;
+}
+
+.about-split-media img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    position: absolute;
+    top: 0; left: 0;
+}
+
+/* Values Specific */
+.about-values-left {
+    background-color: #9a7b2f; /* Gold */
+    color: #fff;
+}
+
+.about-values-title {
+    color: #fff;
+    font-weight: 900;
+    text-transform: uppercase;
+    font-size: 2.5rem;
+    margin-bottom: 2rem;
+}
+
+/* Vision Specific */
+.about-vision-right {
+    background-color: #fff;
+}
+
+.about-vision-title {
+    color: var(--color-primary, #D4AF37);
+    font-weight: 900;
+    text-transform: uppercase;
+    font-size: 2.5rem;
+    margin-bottom: 2rem;
+}
+
+/* Accordion */
+.about-accordion-item {
+    border-bottom: 1px solid rgba(255,255,255,0.3);
+}
+
+.about-vision-right .about-accordion-item {
+    border-bottom: 1px solid rgba(0,0,0,0.1);
+}
+
+.about-accordion-btn {
+    width: 100%;
+    text-align: left;
+    background: none;
+    border: none;
+    padding: 1.5rem 0;
+    font-size: 1.5rem;
+    font-weight: 700;
+    color: inherit;
+    cursor: pointer;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.about-accordion-icon {
+    font-weight: 300;
+    font-size: 2rem;
+    line-height: 1;
+}
+
+.about-vision-right .about-accordion-btn {
+    color: var(--color-dark, #1a1a1a);
+}
+
+.about-accordion-content {
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.3s ease-out;
+}
+
+.about-accordion-content p {
+    padding-bottom: 1.5rem;
+    line-height: 1.6;
+}
+
+/* Staff Section */
+.about-staff {
+    background-color: #000;
+    color: #fff;
+    text-align: center;
+}
+
+.about-staff-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 3rem;
+    margin-top: 3rem;
+    justify-content: center;
+}
+
+.about-staff-card img {
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+    object-fit: cover;
+    margin-bottom: 1.5rem;
+    border: 3px solid rgba(255,255,255,0.1);
+}
+
+.about-staff-card h3 {
+    font-size: 1.25rem;
+    margin-bottom: 0.5rem;
+}
+
+.about-staff-card p {
+    color: rgba(255,255,255,0.6);
+    font-size: 0.9rem;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+/* Board Section */
+.about-board {
+    background-color: var(--color-primary, #D4AF37);
+    color: #fff;
+    text-align: center;
+}
+
+.about-board-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 2rem;
+    margin-top: 3rem;
+    justify-content: center;
+}
+
+.about-board-card img {
+    width: 180px;
+    height: 180px;
+    border-radius: 50%;
+    object-fit: cover;
+    margin-bottom: 1rem;
+    border: 3px solid rgba(255,255,255,0.2);
+}
+
+/* Responsive */
+@media (max-width: 900px) {
+    .about-intro-grid,
+    .about-split-section {
+        grid-template-columns: 1fr;
+    }
+
+    .about-split-media {
+        order: -1; /* Image on top */
+    }
+    
+    .about-hero {
+        height: 30vh;
+    }
+}

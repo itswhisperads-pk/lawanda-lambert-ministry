@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sunday Messages - Transformation Church</title>
+    <link rel="stylesheet" href="assets/css/styles.css">
+    <link rel="stylesheet" href="assets/css/sermons.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Jost:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet"></head>
+
+</head>
+<body>
+
+    <div id="header-placeholder"></div>
+
+    <main class="sermons-page">
+        <!-- 1. Hero Section -->
+        <section class="sermons-hero">
+            <div class="sermons-hero-content">
+                <h1>SUNDAY MESSAGES</h1>
+                <p class="sermons-subscribe-text">Subscribe to a Podcast</p>
+                <div class="sermons-hero-buttons">
+                    <button class="sermons-btn-pill sermons-btn-light">Apple</button>
+                    <button class="sermons-btn-pill sermons-btn-dark">Spotify</button>
+                </div>
+            </div>
+        </section>
+
+        <!-- 2. Tabs Section -->
+        <section class="sermons-tabs-section">
+            <div class="sermons-container">
+                <div class="sermons-tabs">
+                    <button class="sermons-tab active" data-tab="date">Sermons By Date</button>
+                    <button class="sermons-tab" data-tab="series">Sermons By Series</button>
+                    <button class="sermons-tab" data-tab="subscribe">Subscribe to Podcast</button>
+                </div>
+            </div>
+        </section>
+
+        <!-- 3. Main Content Layout -->
+        <section class="sermons-content-section">
+            <div class="sermons-container">
+                
+                <!-- VIEW 1: SERMONS BY DATE (Default) -->
+                <div id="sermons-view-date" class="sermons-view active">
+                    <div class="sermons-layout">
+                        <!-- Left Column: List -->
+                        <div class="sermons-list-wrapper">
+                            <div id="sermons-list-date" class="sermons-list">
+                                <!-- JS will populate items here -->
+                            </div>
+                            <div id="sermons-pagination-date" class="sermons-pagination">
+                                <!-- JS will populate pagination here -->
+                            </div>
+                        </div>
+
+                        <!-- Right Column: Sidebar (Only visible in Date View) -->
+                        <aside class="sermons-sidebar">
+                            <h3 class="sermons-filter-heading">Filters</h3>
+                            <div class="sermons-filter-group">
+                                <ul class="sermons-filter-list">
+                                    <li><a href="#">How We Do Life Together</a></li>
+                                    <li><a href="#">Habits that Lead to the Heart of…</a></li>
+                                    <li><a href="#">Rooted Return</a></li>
+                                    <li><a href="#">Sermon on the Mount</a></li>
+                                    <li><a href="#">Family Matters</a></li>
+                                </ul>
+                                <button class="sermons-show-more">Show More ▼</button>
+                            </div>
+                            <div class="sermons-filter-group">
+                                <ul class="sermons-filter-list-badges">
+                                    <li><span>Jeremy Darrow</span> <span class="sermons-badge">40</span></li>
+                                    <li><span>Gene Howard</span> <span class="sermons-badge">34</span></li>
+                                    <li><span>Caleb MacCallum</span> <span class="sermons-badge">11</span></li>
+                                    <li><span>Guest Speaker</span> <span class="sermons-badge">56</span></li>
+                                </ul>
+                                <button class="sermons-show-more">Show More ▼</button>
+                            </div>
+                            <div class="sermons-filter-group">
+                                <ul class="sermons-filter-list-badges">
+                                    <li><span>2026</span> <span class="sermons-badge">5</span></li>
+                                    <li><span>2025</span> <span class="sermons-badge">41</span></li>
+                                    <li><span>2024</span> <span class="sermons-badge">47</span></li>
+                                    <li><span>All</span></li>
+                                </ul>
+                            </div>
+                        </aside>
+                    </div>
+                </div>
+
+                <!-- VIEW 2: SERMONS BY SERIES -->
+                <div id="sermons-view-series" class="sermons-view" style="display: none;">
+                    <div id="sermons-list-series" class="sermons-series-list">
+                        <!-- JS will populate series rows here -->
+                    </div>
+                    <div id="sermons-pagination-series" class="sermons-pagination">
+                        <!-- JS will populate pagination here -->
+                    </div>
+                </div>
+
+                <!-- VIEW 2B: SERIES DETAILS (Hidden by default) -->
+                <div id="sermons-view-series-detail" class="sermons-view" style="display: none;">
+                    <button id="sermons-back-to-series" class="sermons-btn-text">← Back to All Series</button>
+                    <div id="sermons-series-detail-header" class="sermons-series-detail-header">
+                        <!-- JS populated -->
+                    </div>
+                    <div id="sermons-series-detail-list" class="sermons-list">
+                        <!-- JS populated -->
+                    </div>
+                </div>
+
+                <!-- VIEW 3: SUBSCRIBE -->
+                <div id="sermons-view-subscribe" class="sermons-view" style="display: none;">
+                    <div class="sermons-subscribe-container">
+                        <h2>Subscribe to a Podcast</h2>
+                        <p>Listen to our messages on your favorite platform.</p>
+                        <div class="sermons-subscribe-buttons">
+                            <button class="sermons-btn-pill sermons-btn-light" style="background: #000; color: #fff; border: none;">Apple Podcasts</button>
+                            <button class="sermons-btn-pill sermons-btn-dark" style="background: #1DB954; color: #fff; border: none;">Spotify</button>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </section>
+    </main>
+
+    <div id="footer-placeholder"></div>
+
+    <script src="assets/js/main.js"></script>
+    <script src="assets/js/sermons.js"></script>
+</body>
+</html>

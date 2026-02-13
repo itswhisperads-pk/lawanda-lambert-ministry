@@ -1,0 +1,357 @@
+/* Scoped styles for "I'm New" page */
+
+/* Variables (Local Scope) */
+:root {
+    --new-gold: #9a7b2f;
+    --new-black: #000000;
+    --new-white: #ffffff;
+    --new-text-dark: #1a1a1a;
+    --new-text-light: #f4f4f4;
+}
+
+/* 1. Hero Section */
+.new-hero {
+    position: relative;
+    width: 100%;
+    min-height: 420px;
+    height: 50vh;
+    background-image: url('..assets/img/im-new.png');
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 0;
+}
+
+/* Gold tint overlay */
+.new-hero::before {
+    content: '';
+    position: absolute;
+    top: 0; left: 0; width: 100%; height: 100%;
+    background-color: rgba(154, 123, 47, 0.4); /* Gold tint */
+    z-index: 1;
+}
+
+.new-hero-content {
+    position: relative;
+    z-index: 2;
+    text-align: center;
+    color: var(--new-white);
+}
+
+.new-hero-content h1 {
+    font-size: clamp(3rem, 6vw, 5rem);
+    font-weight: 900;
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+    margin: 0;
+    text-shadow: 0 2px 10px rgba(0,0,0,0.2);
+}
+
+/* 2. Grid Section */
+.new-grid-section {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: auto auto;
+    width: 100%;
+}
+
+.new-grid-item {
+    position: relative;
+    min-height: 400px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+/* Top Left: Clock */
+.new-grid-clock {
+    background-color: var(--new-white);
+    align-items: center;
+}
+
+.new-grid-clock img {
+    max-width: 60%;
+    max-height: 80%;
+    width: auto;
+    height: auto;
+    object-fit: contain;
+}
+
+/* Top Right: Service Time */
+.new-grid-time {
+    background-color: var(--new-gold);
+    color: var(--new-white);
+    align-items: center;
+    text-align: center;
+    padding: 2rem;
+}
+
+/* Bottom Left: Directions */
+.new-grid-directions {
+    background-color: var(--new-black);
+    color: var(--new-white);
+    padding: 4rem;
+    align-items: flex-start;
+}
+
+/* Bottom Right: Church Photo */
+.new-grid-church {
+    padding: 0;
+}
+
+.new-grid-church img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+}
+
+/* Inner Content Helpers */
+.new-content-wrapper {
+    max-width: 450px;
+    width: 100%;
+    margin: 0 auto;
+}
+
+.new-grid-item h2 {
+    font-size: 2rem;
+    font-weight: 800;
+    margin-bottom: 1rem;
+    text-transform: capitalize;
+}
+
+.new-grid-item p {
+    font-size: 1rem;
+    line-height: 1.6;
+    margin-bottom: 1rem;
+    opacity: 0.9;
+}
+
+/* Directions Specifics */
+.new-direction-block {
+    margin-bottom: 1.5rem;
+}
+
+.new-direction-block h3 {
+    font-size: 1.1rem;
+    font-weight: 700;
+    margin-bottom: 0.5rem;
+    color: rgba(255,255,255,0.9);
+}
+
+.new-direction-block p {
+    font-size: 0.95rem;
+    margin-bottom: 0.5rem;
+    color: rgba(255,255,255,0.7);
+}
+
+.new-highlight {
+    font-style: italic;
+    margin-bottom: 2rem;
+}
+
+.new-btn-gold {
+    display: inline-block;
+    background-color: var(--new-gold);
+    color: var(--new-black);
+    padding: 12px 24px;
+    font-weight: 700;
+    text-decoration: none;
+    border-radius: 4px;
+    transition: filter 0.2s;
+}
+
+.new-btn-gold:hover {
+    filter: brightness(1.1);
+    text-decoration: none;
+}
+
+/* 3. FAQ Section */
+.new-faq-section {
+    background-color: var(--new-gold);
+    padding: 6rem 1rem;
+    color: var(--new-white);
+}
+
+.new-container {
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.new-faq-header {
+    margin-bottom: 3rem;
+}
+
+.new-faq-header h2 {
+    font-size: 2.5rem;
+    font-weight: 900;
+    margin-bottom: 1rem;
+    text-transform: uppercase;
+}
+
+.new-faq-header p {
+    font-size: 1.1rem;
+    max-width: 600px;
+    line-height: 1.5;
+}
+
+/* Accordion */
+.new-accordion-item {
+    border-bottom: 1px solid rgba(255,255,255,0.2);
+}
+
+.new-accordion-btn {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: none;
+    border: none;
+    padding: 1.5rem 0;
+    text-align: left;
+    color: var(--new-white);
+    font-size: 1.25rem;
+    font-weight: 700;
+    cursor: pointer;
+}
+
+.new-chevron {
+    width: 12px;
+    height: 12px;
+    border-right: 2px solid var(--new-white);
+    border-bottom: 2px solid var(--new-white);
+    transform: rotate(45deg);
+    transition: transform 0.3s;
+    margin-left: 1rem;
+}
+
+.new-accordion-btn[aria-expanded="true"] .new-chevron {
+    transform: rotate(-135deg);
+}
+
+.new-accordion-content {
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.3s ease-out;
+}
+
+.new-accordion-content p {
+    padding-bottom: 1.5rem;
+    line-height: 1.6;
+    font-size: 1rem;
+    opacity: 0.9;
+}
+
+/* 4. Split Section */
+.new-split-section {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    min-height: 600px;
+}
+
+.new-split-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+}
+
+.new-split-content {
+    background-color: var(--new-white);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 4rem;
+}
+
+.new-content-wrapper-light {
+    max-width: 450px;
+    width: 100%;
+}
+
+.new-text-gold {
+    color: var(--new-gold);
+    font-weight: 800;
+    text-transform: uppercase;
+}
+
+.new-split-content h2 {
+    font-size: 2.5rem;
+    margin-bottom: 1.5rem;
+}
+
+.new-split-content p {
+    color: var(--new-text-dark);
+    line-height: 1.7;
+    margin-bottom: 1.5rem;
+}
+
+.new-mt-large {
+    margin-top: 3rem;
+}
+
+.new-mt-medium {
+    margin-top: 1.5rem;
+}
+
+.new-split-content h3 {
+    font-size: 1.5rem;
+    margin-bottom: 0.5rem;
+}
+
+.new-link-plain {
+    color: var(--new-text-dark);
+    text-decoration: none;
+    font-size: 1rem;
+}
+
+.new-link-plain:hover {
+    text-decoration: underline;
+}
+
+.new-btn-light {
+    background-color: #f0f0f0;
+    border: none;
+    padding: 12px 24px;
+    font-weight: 600;
+    color: var(--new-text-dark);
+    cursor: pointer;
+    border-radius: 4px;
+    transition: background 0.2s;
+}
+
+.new-btn-light:hover {
+    background-color: #e0e0e0;
+}
+
+/* Responsive */
+@media (max-width: 900px) {
+    /* Grid becomes 1 column */
+    .new-grid-section {
+        grid-template-columns: 1fr;
+        grid-template-rows: auto;
+    }
+
+    /* Mobile Order: Clock, Service Time, Directions, Church Photo */
+    .new-grid-clock { order: 1; min-height: 300px; }
+    .new-grid-time { order: 2; min-height: auto; padding: 4rem 2rem; }
+    .new-grid-directions { order: 3; padding: 3rem 2rem; }
+    .new-grid-church { order: 4; min-height: 300px; }
+
+    /* Split Section becomes stacked */
+    .new-split-section {
+        grid-template-columns: 1fr;
+    }
+    .new-split-image {
+        min-height: 300px;
+    }
+    .new-split-content {
+        padding: 3rem 1.5rem;
+    }
+
+    .new-hero-content h1 {
+        font-size: 3rem;
+    }
+}

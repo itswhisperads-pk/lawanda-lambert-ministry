@@ -1,0 +1,18 @@
+{
+  "news": [
+    {
+      "slug": "volunteers-needed",
+      "title": "Volunteers Needed",
+      "dateISO": "2026-02-10",
+      "excerpt": "Has God gifted you with any talent? Do you have any spare time to give? Please prayerfully consider where you can help out.",
+      "content": "Full content about volunteering needs..."
+    },
+    {
+      "slug": "new-series-starts",
+      "title": "New Sermon Series Starts Soon",
+      "dateISO": "2026-01-25",
+      "excerpt": "Get ready for our upcoming series on the book of Acts.",
+      "content": "Full content about the new series..."
+    }
+  ]
+}

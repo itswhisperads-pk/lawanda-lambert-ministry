@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Transformation Church</title>
+    <link rel="stylesheet" href="assets/css/styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="icon" type="image/png" href="assets/img/favicon.png">
+<link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Jost:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet"></head>
+<body>
+
+    <!-- Skip Link for Accessibility -->
+    <a href="#main-content" class="skip-link">Skip to main content</a>
+
+    <div id="header-placeholder"></div>
+
+    <main id="main-content">
+        <section class="hero" id="hero-section">
+            <div class="hero-background" aria-hidden="true">
+                <!-- Fallback gradient is handled in CSS if image fails -->
+                <img src="assets/img/hero-home.jpg" alt="Congregation worshipping" class="hero-image" onerror="this.style.display='none'">
+                <div class="hero-overlay"></div>
+            </div>
+            
+            <div class="hero-content">
+                <h1 id="hero-headline" class="hero-headline">
+                    <!-- Injected via JS -->
+                    WELCOME
+                </h1>
+                <p id="hero-subheadline" class="hero-subheadline">
+                    <!-- Injected via JS -->
+                    JOIN US SUNDAY @ 10:30
+                </p>
+                <!-- Optional CTA (Hidden by default as per req, but ready) -->
+                <!-- <a href="#" class="btn btn-primary mt-4">Plan Your Visit</a> -->
+            </div>
+        </section>
+
+        <!-- Mission Links Section -->
+        <section class="mission-links" aria-labelledby="mission-title"> 
+            <div class="container"> 
+                <h2 id="mission-title" class="mission-title">We are Your Church</h2> 
+        
+                <p class="mission-subtitle"> 
+                We exist to help people grow in faith, build community, and serve our city — and beyond. 
+                </p> 
+        
+                <div class="link-grid"> 
+                <!-- Card 1 --> 
+                <a class="link-card" href="im-new.html"> 
+                    <div class="link-card__media" style="--bg:url('/assets/img/card-1.svg')"> 
+                    <div class="link-card__overlay" aria-hidden="true"></div> 
+                    <div class="link-card__text"> 
+                        <span class="link-card__kicker">I’M</span> 
+                        <span class="link-card__headline">NEW</span> 
+                    </div> 
+                    </div> 
+                </a> 
+        
+                <!-- Card 2 --> 
+                <a class="link-card" href="life-groups.html"> 
+                    <div class="link-card__media" style="--bg:url('/assets/img/card-2.svg')"> 
+                    <div class="link-card__overlay" aria-hidden="true"></div> 
+                    <div class="link-card__text"> 
+                        <span class="link-card__kicker">JOIN A</span> 
+                        <span class="link-card__headline">LIFE GROUP</span> 
+                    </div> 
+                    </div> 
+                </a> 
+        
+                <!-- Card 3 --> 
+                <a class="link-card" href="sermons.html"> 
+                    <div class="link-card__media" style="--bg:url('/assets/img/card-3.svg')"> 
+                    <div class="link-card__overlay" aria-hidden="true"></div> 
+                    <div class="link-card__text"> 
+                        <span class="link-card__kicker">LATEST</span> 
+                        <span class="link-card__headline">SERMONS</span> 
+                    </div> 
+                    </div> 
+                </a> 
+                </div> 
+            </div> 
+        </section>
+
+        <!-- Events Band Section -->
+        <section class="events-band" aria-labelledby="events-title"> 
+            <div class="container"> 
+                <header class="band-header"> 
+                <h2 id="events-title" class="band-title">EVENTS</h2> 
+                <p class="band-subtitle">Mark your calendars for these events coming up.</p> 
+                </header> 
+        
+                <div class="events-grid"> 
+                <!-- Event 1 --> 
+                <article class="event-card"> 
+                    <a class="event-card__media" href="event.html?slug=community-winter-carnival"> 
+                    <img src="assets/img/event-1.svg" alt="Community Winter Carnival poster placeholder" loading="lazy" /> 
+                    </a> 
+                    <h3 class="event-card__title"> 
+                    <a href="event.html?slug=community-winter-carnival">Community Winter Carnival</a> 
+                    </h3> 
+                    <p class="event-card__meta">Monday, February 16, 2026</p> 
+                    <p class="event-card__meta event-card__meta--muted">Your Church Name</p> 
+                </article> 
+        
+                <!-- Event 2 --> 
+                <article class="event-card"> 
+                    <a class="event-card__media" href="event.html?slug=laugh-your-way"> 
+                    <img src="assets/img/event-2.svg" alt="Laugh Your Way event image placeholder" loading="lazy" /> 
+                    </a> 
+                    <h3 class="event-card__title"> 
+                    <a href="event.html?slug=laugh-your-way">Laugh Your Way to a Better Marriage, Guest Speaker</a> 
+                    </h3> 
+                    <p class="event-card__meta">Sunday, February 22, 2026 | 12:30PM</p> 
+                </article> 
+        
+                <!-- Event 3 --> 
+                <article class="event-card"> 
+                    <a class="event-card__media" href="event.html?slug=coldest-night"> 
+                    <img src="assets/img/event-3.svg" alt="Coldest night of the year logo placeholder" loading="lazy" /> 
+                    </a> 
+                    <h3 class="event-card__title"> 
+                    <a href="event.html?slug=coldest-night">Coldest Night of the Year</a> 
+                    </h3> 
+                    <p class="event-card__meta">Saturday, February 28, 2026</p> 
+                </article> 
+                </div> 
+            </div> 
+        </section>
+
+        <!-- Sermons Section -->
+        <section class="sermons-band" aria-labelledby="sermons-title"> 
+           <div class="container sermons-layout"> 
+             <!-- Left intro block --> 
+             <header class="sermons-intro"> 
+               <h2 id="sermons-title" class="sermons-title">SERMONS</h2> 
+               <p class="sermons-subtitle">Hear the latest messages.</p> 
+               <a class="sermons-link" href="sermons.html">View All</a> 
+             </header> 
+         
+             <!-- Right cards --> 
+             <div class="sermons-grid" role="list"> 
+               <!-- Sermon 1 --> 
+               <article class="sermon-card" role="listitem"> 
+                 <a class="sermon-card__media" href="sermon.html?slug=bright-lights"> 
+                   <img src="assets/img/sermon-1.svg" alt="Sermon artwork placeholder: Bright Lights" loading="lazy" /> 
+                 </a> 
+                 <h3 class="sermon-card__title"> 
+                   <a href="sermon.html?slug=bright-lights">Bright Lights</a> 
+                 </h3> 
+                 <p class="sermon-card__date">Feb 8, 2026</p> 
+               </article> 
+         
+               <!-- Sermon 2 --> 
+               <article class="sermon-card" role="listitem"> 
+                 <a class="sermon-card__media" href="sermon.html?slug=life-together"> 
+                   <img src="assets/img/sermon-2.svg" alt="Sermon artwork placeholder: How We Do Life Together" loading="lazy" /> 
+                 </a> 
+                 <h3 class="sermon-card__title"> 
+                   <a href="sermon.html?slug=life-together">How We Do Life Together</a> 
+                 </h3> 
+                 <p class="sermon-card__date">Feb 1, 2026</p> 
+               </article> 
+         
+               <!-- Sermon 3 --> 
+               <article class="sermon-card" role="listitem"> 
+                 <a class="sermon-card__media" href="sermon.html?slug=confession-community"> 
+                   <img src="assets/img/sermon-3.svg" alt="Sermon artwork placeholder: Confession & Community" loading="lazy" /> 
+                 </a> 
+                 <h3 class="sermon-card__title"> 
+                   <a href="sermon.html?slug=confession-community">Confession &amp; Community</a> 
+                 </h3> 
+                 <p class="sermon-card__date">Jan 18, 2026</p> 
+               </article> 
+             </div> 
+           </div> 
+         </section>
+    </main>
+
+    <div id="footer-placeholder"></div>
+
+    <script src="assets/js/main.js"></script>
+</body>
+</html>

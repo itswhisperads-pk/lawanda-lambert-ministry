@@ -1,0 +1,263 @@
+/* Scoped styles for Speaking Requests Page */
+.speaking-page {
+    width: 100%;
+    font-family: "Jost", -apple-system, BlinkMacSystemFont, sans-serif;
+    color: #fff;
+    background-color: #0b0b0b; /* Dark background for the whole page/form section */
+}
+
+/* Hero Section */
+.speaking-hero {
+    position: relative;
+    width: 100%;
+    height: 400px;
+    background-image: url('../img/speaking-hero.jpg');
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}
+
+.speaking-hero-overlay {
+    position: absolute;
+    top: 0; left: 0; width: 100%; height: 100%;
+    background-color: rgba(154, 123, 47, 0.75); /* Warm gold overlay */
+    z-index: 1;
+}
+
+.speaking-hero-content {
+    position: relative;
+    z-index: 2;
+    color: #fff;
+    padding: 20px;
+}
+
+.speaking-hero-content h1 {
+    font-size: 3rem;
+    font-weight: 700;
+    margin: 0 0 15px;
+    letter-spacing: 1px;
+}
+
+.speaking-subtitle {
+    font-size: 1.1rem;
+    font-weight: 400;
+    opacity: 0.9;
+    margin: 0;
+}
+
+/* Form Section */
+.speaking-form-section {
+    padding: 60px 20px 100px;
+    background-color: #0b0b0b;
+}
+
+.speaking-container {
+    max-width: 1100px;
+    margin: 0 auto;
+}
+
+.speaking-form {
+    display: flex;
+    flex-direction: column;
+    gap: 25px;
+}
+
+.speaking-grid-2col {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 25px;
+}
+
+.speaking-form-group {
+    display: flex;
+    flex-direction: column;
+}
+
+/* Inputs */
+.speaking-input {
+    width: 100%;
+    padding: 15px 18px;
+    background-color: #fff;
+    border: 1px solid #ccc;
+    border-radius: 2px;
+    font-family: "Jost", sans-serif;
+    font-size: 0.9rem;
+    color: #333;
+    outline: none;
+    text-transform: uppercase;
+}
+
+.speaking-input::placeholder {
+    color: #666;
+    letter-spacing: 1px;
+}
+
+.speaking-input:focus {
+    border-color: #9a7b2f; /* Gold accent */
+}
+
+/* Date input specific */
+.speaking-input-date {
+    text-transform: none; /* Date placeholders are browser specific */
+    color: #666;
+}
+
+/* Textarea */
+.speaking-textarea {
+    width: 100%;
+    padding: 15px 18px;
+    background-color: #fff;
+    border: 1px solid #ccc;
+    border-radius: 2px;
+    font-family: "Jost", sans-serif;
+    font-size: 0.9rem;
+    color: #333;
+    resize: vertical;
+    outline: none;
+}
+
+/* Labels */
+.speaking-label {
+    display: block;
+    margin-bottom: 15px;
+    color: #999;
+    font-size: 0.9rem;
+    text-transform: capitalize; /* "Purpose of Event" etc */
+}
+
+.speaking-label-text {
+    display: block;
+    margin-bottom: 10px;
+    color: #fff;
+    font-size: 0.85rem;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    background: #fff;
+    color: #333;
+    padding: 15px 18px;
+    border-radius: 2px;
+    width: 100%;
+    box-sizing: border-box;
+    font-weight: 500;
+}
+/* Note: The screenshot shows the label for the textarea looks like an input placeholder or a white bar. 
+   I've styled .speaking-label-text to look like the input label in the screenshot (white bar with text). 
+   If it should be outside, I can adjust. But typically "PLEASE PROVIDE DETAILS..." is a label. 
+   Wait, in the screenshot, "PLEASE PROVIDE DETAILS..." is inside the white box? 
+   No, usually it's a label above or a placeholder. 
+   I'll make it a label above the textarea, but styled white like the screenshot's potential label bars if that's what it is.
+   Actually, looking at the screenshot, the "PLEASE PROVIDE..." text is inside a white box. 
+   It might be the placeholder of the textarea. 
+   I will use placeholder for the textarea to match the visual style of other inputs. 
+   So I will hide the label and put text in placeholder? 
+   The user prompt says: Label (long): "Please provide details..." 
+   I will use a label above it but styled simply as text for better accessibility, 
+   OR I'll style it to look like the input labels. 
+   Let's stick to clean labels above for the checkboxes, and placeholders for text inputs. 
+   For the textarea, I'll put the text in the placeholder for visual matching.
+*/
+
+.speaking-textarea::placeholder {
+    text-transform: uppercase;
+    color: #666;
+    letter-spacing: 1px;
+    line-height: 1.4;
+}
+
+/* Checkboxes */
+.speaking-checkbox-section {
+    margin-top: 10px;
+}
+
+.speaking-checkbox-group {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.speaking-checkbox-label {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    color: #fff;
+    font-size: 0.9rem;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    cursor: pointer;
+}
+
+.speaking-checkbox-label input[type="checkbox"] {
+    width: 18px;
+    height: 18px;
+    accent-color: #fff; /* White checkbox check */
+    cursor: pointer;
+}
+
+/* Heard About Section Grid */
+.speaking-hear-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 25px;
+    align-items: flex-start;
+}
+
+.speaking-conditional-container {
+    /* Container for the "If other" input in the heard section */
+    padding-top: 0;
+}
+
+/* Conditional Field (Purpose Other) */
+.speaking-conditional-field {
+    margin-top: 15px;
+}
+
+/* Submit Button */
+.speaking-submit-row {
+    display: flex;
+    justify-content: flex-end;
+    margin-top: 20px;
+}
+
+.speaking-btn-submit {
+    background-color: transparent;
+    color: #fff;
+    border: 2px solid #fff; /* Or gold #9a7b2f if preferred, but screenshot looks white/light */
+    padding: 12px 40px;
+    font-size: 1rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    cursor: pointer;
+    letter-spacing: 1px;
+    transition: all 0.3s ease;
+}
+
+.speaking-btn-submit:hover {
+    background-color: #fff;
+    color: #000;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    .speaking-grid-2col {
+        grid-template-columns: 1fr;
+    }
+
+    .speaking-hear-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .speaking-submit-row {
+        justify-content: center;
+    }
+
+    .speaking-btn-submit {
+        width: 100%;
+    }
+
+    .speaking-hero h1 {
+        font-size: 2.2rem;
+    }
+}

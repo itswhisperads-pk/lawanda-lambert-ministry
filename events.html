@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Events - Transformation Church</title>
+    <link rel="stylesheet" href="assets/css/styles.css">
+    <link rel="stylesheet" href="assets/css/events.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Jost:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet"></head>
+
+</head>
+<body>
+
+    <div id="header-placeholder"></div>
+
+    <main class="events-page">
+        <!-- 1. Hero Section -->
+        <section class="events-hero">
+            <div class="events-hero-content">
+                <h1>Events</h1>
+            </div>
+        </section>
+
+        <!-- 2. Toolbar Section -->
+        <section class="events-toolbar-section">
+            <div class="events-container">
+                <div class="events-toolbar">
+                    <div class="events-toggle-group">
+                        <button id="events-btn-list" class="events-toggle-btn">List</button>
+                        <button id="events-btn-calendar" class="events-toggle-btn events-active">Calendar</button>
+                    </div>
+                    
+                    <div class="events-actions">
+                        <button class="events-filter-btn">
+                            Filter
+                            <span class="events-arrow">▼</span>
+                        </button>
+                        <a href="https://calendar.google.com/calendar/u/0?cid=YOUR_CALENDAR_ID" target="_blank" class="events-subscribe-link">Subscribe to Calendar</a>
+                    </div>
+                </div>
+            </div>
+            <hr class="events-divider">
+        </section>
+
+        <!-- 3. Main Content Area -->
+        <section class="events-content-section">
+            <div class="events-container">
+                
+                <!-- Calendar View (Active by default) -->
+                <div id="events-view-calendar" class="events-view-container">
+                    <iframe 
+                        src="https://calendar.google.com/calendar/embed?src=YOUR_CALENDAR_ID&ctz=America/New_York" 
+                        style="border: 0" 
+                        width="800" 
+                        height="600" 
+                        frameborder="0" 
+                        scrolling="no"
+                        class="events-google-embed">
+                    </iframe>
+                </div>
+
+                <!-- List View (Hidden by default) -->
+                <div id="events-view-list" class="events-view-container" style="display: none;">
+                    <div class="events-placeholder-message">
+                        <h2>List view coming soon.</h2>
+                    </div>
+                </div>
+
+            </div>
+        </section>
+    </main>
+
+    <div id="footer-placeholder"></div>
+
+    <script src="assets/js/main.js"></script>
+    <script src="assets/js/events.js"></script>
+</body>
+</html>
