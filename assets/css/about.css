@@ -3,14 +3,14 @@
 /* Hero Section */
 .about-hero {
     position: relative;
-    height: 40vh;
+    height: 70vh;
     min-height: 300px;
     display: flex;
     align-items: center;
     justify-content: center;
     text-align: center;
     color: var(--color-white, #fff);
-    background-image: url('../img/about-hero.jpg');
+    background-image: url('../img/hero-about.png');
     background-size: cover;
     background-position: center;
     background-color: var(--color-dark, #1a1a1a);
