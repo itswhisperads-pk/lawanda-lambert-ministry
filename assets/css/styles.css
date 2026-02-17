@@ -436,6 +436,8 @@ ul {
  .event-card__media img{ 
    display: block; 
    width: 100%; 
+   height: 180px;        /* thumbnail height */
+  overflow: hidden;
    height: auto; 
    aspect-ratio: 16 / 9;   /* matches wide thumbnails */ 
    object-fit: cover; 

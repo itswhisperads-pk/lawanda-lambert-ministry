@@ -1,0 +1,149 @@
+/* Scope everything to .event-page */
+.event-page {
+  font-family: "Jost", sans-serif;
+  color: #1b1b1b;
+  background: #fff;
+}
+
+/* HERO */
+.event-hero {
+  position: relative;
+  width: 100%;
+  min-height: 380px;
+  display: grid;
+  place-items: center;
+  text-align: center;
+  color: #fff;
+}
+.event-hero-bg {
+  position: absolute;
+  inset: 0;
+  background-image: url('../img/events-hero.jpg');
+  background-size: cover;
+  background-position: center;
+  z-index: 0;
+}
+.event-hero-overlay {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(135deg, rgba(154,123,47,.6), rgba(0,0,0,.35));
+  mix-blend-mode: multiply;
+  z-index: 1;
+}
+.event-hero-inner {
+  position: relative;
+  z-index: 2;
+  padding: 40px 20px;
+  max-width: 900px;
+}
+.event-hero-title {
+  font-weight: 800;
+  font-size: clamp(32px, 6vw, 56px);
+  letter-spacing: .02em;
+  margin-bottom: 16px;
+}
+.event-hero-sub {
+  opacity: .95;
+  margin: 4px 0;
+  font-size: clamp(14px, 1.3vw, 18px);
+}
+.event-hero-breadcrumbs {
+  margin-top: 16px;
+  opacity: .9;
+  font-size: 14px;
+  letter-spacing: .06em;
+}
+.event-crumb-sep {
+  margin: 0 8px;
+}
+
+/* BODY */
+.event-body {
+  padding: 48px 20px 80px;
+}
+.event-container {
+  max-width: 1140px;
+  margin: 0 auto;
+}
+.event-grid {
+  display: grid;
+  grid-template-columns: 2fr 1fr; /* ~ 66/33 */
+  gap: 34px;
+}
+.event-col--main { }
+.event-col--side { }
+
+.event-feature img {
+  display: block;
+  width: 100%;
+  height: auto;
+  border-radius: 8px;
+  box-shadow: 0 16px 40px rgba(0,0,0,.12);
+}
+.event-cta {
+  margin: 16px 0 22px;
+}
+.event-btn {
+  display: inline-block;
+  background: #0b0b0b;
+  color: #fff;
+  padding: 10px 16px;
+  border-radius: 6px;
+  font-weight: 600;
+  font-size: 14px;
+  letter-spacing: .02em;
+  transition: transform .15s ease, opacity .15s ease;
+}
+.event-btn:hover { transform: translateY(-1px); opacity: .95; }
+
+.event-content p {
+  margin: 0 0 16px;
+  line-height: 1.7;
+  color: #222;
+}
+
+/* Sidebar Cards */
+.event-card {
+  background: #f3f3f3;
+  border-radius: 10px;
+  padding: 18px 16px;
+  margin-bottom: 18px;
+}
+.event-card-title {
+  font-weight: 800;
+  font-size: 16px;
+  letter-spacing: .06em;
+  text-transform: uppercase;
+  color: #9a7b2f;
+  margin-bottom: 8px;
+}
+.event-list {
+  display: grid;
+  gap: 10px;
+}
+.event-list-item {
+  display: grid;
+  grid-template-columns: 80px 1fr;
+  gap: 8px;
+  align-items: start;
+  padding: 10px 10px;
+  background: rgba(255,255,255,.65);
+  border-radius: 8px;
+}
+.event-list-date {
+  font-weight: 700;
+  color: #666;
+  font-size: 13px;
+}
+.event-list-title {
+  color: #222;
+  font-size: 14px;
+}
+
+/* Responsive */
+@media (max-width: 960px) {
+  .event-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
