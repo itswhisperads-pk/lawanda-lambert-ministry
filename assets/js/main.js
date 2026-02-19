@@ -7,9 +7,9 @@ const SiteConfig = {
     },
     nav: {
         left: [
-            { label: "I'm New", href: "/im-new.html" },
-            { label: "About", href: "/about.html" },
-            { label: "Prayer Request", href: "/speaking-requests.html" },
+            { label: "I'm New", href: "im-new.html" },
+            { label: "About", href: "about.html" },
+            { label: "Prayer Request", href: "speaking-requests.html" },
             { label: "Events", href: "/events.html" }
         ],
         right: [   
