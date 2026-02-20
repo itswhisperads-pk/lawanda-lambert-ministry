@@ -1,5 +1,0 @@
-<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="600" viewBox="0 0 1200 600">
-  <rect width="1200" height="600" fill="#2c3e50"/>
-  <rect width="1200" height="600" fill="rgba(60, 50, 40, 0.4)"/>
-  <text x="50%" y="50%" font-family="sans-serif" font-size="60" fill="white" text-anchor="middle" dy=".3em">Hero Image Placeholder</text>
-</svg>

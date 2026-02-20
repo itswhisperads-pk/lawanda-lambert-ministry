@@ -10,8 +10,9 @@
 .speaking-hero {
     position: relative;
     width: 100%;
-    height: 400px;
-    background-image: url('../img/speaking-hero.jpg');
+    height: 60vh;
+    min-height: 300px;
+    background-image: url('../img/prayer-request-hero.png');
     background-size: cover;
     background-position: center;
     display: flex;

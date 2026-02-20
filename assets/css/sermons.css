@@ -10,11 +10,11 @@
 .sermons-hero {
     position: relative;
     width: 100%;
-    height: 50vh;
+    height: 80vh;
     min-height: 400px;
-    background-image: url('../img/sermons-hero.jpg');
+    background-image: url('../img/sermons-hero.png');
     background-size: cover;
-    background-position: center;
+    background-position: top-center;
     display: flex;
     align-items: center;
     justify-content: center;
