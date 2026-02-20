@@ -10,12 +10,12 @@ const SiteConfig = {
             { label: "I'm New", href: "im-new.html" },
             { label: "About", href: "about.html" },
             { label: "Prayer Request", href: "speaking-requests.html" },
+            { label: "Events", href: "events.html" }
         ],
-        right: [
-            { label: "Events", href: "events.html" }   
+        right: [   
             { label: "Sermons", href: "sermons.html" },
-         //   { label: "Ministries", href: "ministries.html" },
-         //   { label: "Volunteer", href: "volunteer.html" },
+            { label: "Ministries", href: "ministries.html" },
+            { label: "Volunteer", href: "volunteer.html" },
             { label: "Give", href: "give.html" }
         ]
     },
