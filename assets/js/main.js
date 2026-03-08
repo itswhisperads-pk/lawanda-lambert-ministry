@@ -7,7 +7,7 @@ const SiteConfig = {
     },
     nav: {
         left: [
-            { label: "I'm New", href: "im-new.html" },
+            { label: "First Time Visitor", href: "first-time-visitor.html" },
             { label: "About", href: "about.html" },
             { label: "Prayer Request", href: "speaking-requests.html" },
         ],
@@ -16,7 +16,8 @@ const SiteConfig = {
             { label: "Sermons", href: "sermons.html" },
           //  { label: "Ministries", href: "ministries.html" },
           //  { label: "Volunteer", href: "volunteer.html" },
-            { label: "Give", href: "give.html" }
+            { label: "Give", href: "give.html" },
+            { label: "Contact", href: "contact.html" }
         ]
     },
     hero: {
