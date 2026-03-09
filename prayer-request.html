@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Prayer Request - G.A.E.M.</title>
+  <link rel="stylesheet" href="assets/css/styles.css">
+  <link rel="stylesheet" href="assets/css/speaking-requests.css">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Jost:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+</head>
+<body>
+  <div id="header-placeholder"></div>
+
+  <main class="speaking-page">
+    <!-- Hero Section -->
+    <section class="speaking-hero">
+      <div class="speaking-hero-overlay"></div>
+      <div class="speaking-hero-content">
+        <h1>Prayer Request</h1>
+        <p class="speaking-subtitle">G.A.E.M. is a praying church and would like to pray and stand in agreement with you. We invite you to complete the form below.</p>
+        <p class="speaking-subtitle">Or if you prefer prayer in person someone from our prayer team will contact you at our earliest convenience.</p>
+      </div>
+    </section>
+
+    <!-- Form Section -->
+    <section class="speaking-form-section">
+      <div class="speaking-container">
+        <form action="#" method="POST" class="speaking-form" novalidate>
+
+          <!-- Two-column fields -->
+          <div class="speaking-grid-2col">
+            <div class="speaking-form-group">
+              <input type="text" name="firstName" placeholder="FIRST NAME" required class="speaking-input">
+            </div>
+            <div class="speaking-form-group">
+              <input type="text" name="lastName" placeholder="LAST NAME" required class="speaking-input">
+            </div>
+            <div class="speaking-form-group">
+              <input type="email" name="email" placeholder="EMAIL ADDRESS" required class="speaking-input">
+            </div>
+            <div class="speaking-form-group">
+              <input type="tel" name="phone" placeholder="PHONE NUMBER" class="speaking-input">
+            </div>
+          </div>
+
+          <!-- Full width fields -->
+          <div class="speaking-form-group">
+            <input type="text" name="address" placeholder="ADDRESS (LOCAL/INTERNATIONAL)" class="speaking-input">
+          </div>
+          <div class="speaking-form-group">
+            <label class="speaking-label-text">MESSAGE</label>
+            <textarea name="message" rows="6" class="speaking-textarea" placeholder="MESSAGE"></textarea>
+          </div>
+
+          <!-- Submit -->
+          <div class="speaking-submit-row">
+            <button type="submit" class="speaking-btn-submit">REQUEST A PRAYER</button>
+          </div>
+
+        </form>
+      </div>
+    </section>
+  </main>
+
+  <div id="footer-placeholder"></div>
+  <script src="assets/js/main.js"></script>
+  <!-- Optional: JS used by speaking page; safe to include though not required here -->
+  <!-- <script src="assets/js/speaking-requests.js"></script> -->
+</body>
+</html>

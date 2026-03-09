@@ -9,7 +9,8 @@ const SiteConfig = {
         left: [
             { label: "First Time Visitor", href: "first-time-visitor.html" },
             { label: "About", href: "about.html" },
-            { label: "Prayer Request", href: "speaking-requests.html" },
+            { label: "Speaking Engagement", href: "speaking-requests.html" },
+            { label: "Prayer Request", href: "prayer-request.html" },
         ],
         right: [   
             { label: "Events", href: "events.html" },

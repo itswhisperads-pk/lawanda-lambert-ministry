@@ -139,9 +139,15 @@
 
 .give-ways-grid {
     display: grid;
-    grid-template-columns: repeat(2, 1fr); /* 2 columns on desktop */
+    grid-template-columns: repeat(4, 1fr); /* 4 columns on desktop */
     gap: 60px 40px;
-    align-items: start;
+    /* align-items: start; removed to allow cards to stretch to equal height */
+}
+
+@media (min-width: 768px) and (max-width: 1023px) {
+    .give-ways-grid {
+        grid-template-columns: repeat(2, 1fr); /* 2 columns on tablet */
+    }
 }
 
 .give-way-card {
@@ -149,6 +155,7 @@
     flex-direction: column;
     align-items: center;
     text-align: center;
+    height: 100%; /* Ensure card fills the grid cell height */
 }
 
 .give-icon-wrapper {
@@ -193,6 +200,7 @@
     text-decoration: none;
     font-size: 0.9rem;
     transition: all 0.2s ease;
+    margin-top: auto; /* Push button to the bottom of the card */
 }
 
 .give-btn-link:hover {

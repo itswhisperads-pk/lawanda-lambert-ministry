@@ -8,7 +8,7 @@
       "excerpt": "Shining your light in a dark world.",
       "videoUrl": "#",
       "audioUrl": "#",
-      "image": "/assets/img/sermon-placeholder.svg"
+      "image": "/assets/img/sermons-hero.png"
     },
     {
       "slug": "how-we-do-life-together",
@@ -18,7 +18,7 @@
       "excerpt": "The importance of community and fellowship.",
       "videoUrl": "#",
       "audioUrl": "#",
-      "image": "/assets/img/sermon-placeholder.svg"
+      "image": "/assets/img/sermons-hero.png"
     },
     {
       "slug": "confession-and-community",
@@ -28,7 +28,7 @@
       "excerpt": "Healing through honesty and vulnerability.",
       "videoUrl": "#",
       "audioUrl": "#",
-      "image": "/assets/img/sermon-placeholder.svg"
+      "image": "/assets/img/sermons-hero.png"
     }
   ]
 }

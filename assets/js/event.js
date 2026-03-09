@@ -57,13 +57,13 @@ function getDemoEvents() {
     'community-winter-carnival': {
       title: 'Community Winter Carnival',
       dateText: 'Monday, February 16, 2026',
-      locationText: 'Transformation Church',
+      locationText: 'G.A.E.M.',
       heroImage: 'assets/img/events-hero.jpg',
       featureImage: 'assets/img/winter-carnival.png',
       description: [
         'Mark your calendars for February 16th (Family Day) as a special community winter carnival at our church.',
         'This event, kindly organized by Caleb and Rachel, Alex and Caitlyn, will include family fun activities, games and snacks.',
-        'We will also be inviting those who live in the neighborhood of Transformation Church to join us.',
+        'We will also be inviting those who live in the neighborhood of G.A.E.M. to join us.',
         'More details to come in the future weeks.'
       ],
       upcoming: [
@@ -76,7 +76,7 @@ function getDemoEvents() {
     'sunday-worship': {
       title: 'Sunday Worship',
       dateText: 'Sunday, February 22, 2026 | 10:00 AM',
-      locationText: 'Transformation Church',
+      locationText: 'G.A.E.M.',
       heroImage: 'assets/img/events-hero.jpg',
       featureImage: 'assets/img/event-feature.jpg',
       description: [

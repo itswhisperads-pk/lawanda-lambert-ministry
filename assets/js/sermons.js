@@ -85,7 +85,7 @@ function createSermonItemHTML(item) {
     return `
     <div class="sermons-item">
         <div class="sermons-thumbnail">
-            <img src="${item.thumb}" alt="${item.title}" onerror="this.src='assets/img/sermon-placeholder.svg'">
+            <img src="${item.thumb}" alt="${item.title}" onerror="this.onerror=null;this.src='assets/img/sermons-hero.png'">
         </div>
         <div class="sermons-details">
             <h2 class="sermons-title">${item.title}</h2>
@@ -191,8 +191,8 @@ function renderSeriesView() {
         return `
         <div class="sermons-series-row">
             <div class="sermons-series-thumb">
-                <img src="${series.thumb}" alt="${series.title}" onerror="this.src='assets/img/sermon-placeholder.svg'">
-            </div>
+            <img src="${series.thumb}" alt="${series.title}" onerror="this.onerror=null;this.src='assets/img/sermons-hero.png'">
+        </div>
             <div class="sermons-series-info">
                 <h3 class="sermons-series-title">${series.title}</h3>
                 <span class="sermons-series-count">${series.count} Sermon${series.count !== 1 ? 's' : ''}</span>
@@ -227,7 +227,7 @@ function renderSeriesDetailView(seriesTitle) {
     // Populate Header
     header.innerHTML = `
         <div class="sermons-series-detail-thumb">
-            <img src="${firstItem.thumb}" alt="${seriesTitle}" onerror="this.src='assets/img/sermon-placeholder.svg'">
+            <img src="${firstItem.thumb}" alt="${seriesTitle}" onerror="this.onerror=null;this.src='assets/img/sermons-hero.png'">
         </div>
         <div class="sermons-series-detail-info">
             <h2>${seriesTitle}</h2>
