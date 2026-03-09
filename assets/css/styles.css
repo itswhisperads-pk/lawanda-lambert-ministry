@@ -783,7 +783,7 @@ ul {
 
 .footer-top{ 
   display:grid; 
-  grid-template-columns: 1.25fr 1fr 1fr 1fr; 
+  grid-template-columns: 1fr 1fr 1fr; 
   gap: clamp(18px, 3vw, 54px); 
   padding: 54px 20px 48px; 
   align-items:start; 
