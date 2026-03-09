@@ -24,7 +24,7 @@ const SiteConfig = {
     },
     hero: {
         headline: "WELCOME",
-        subheadline: "JOIN US SUNDAY @ 10:30"
+        subheadline: "JOIN US SUNDAY FROM 2 PM to 4 PM "
     }
 };
 
