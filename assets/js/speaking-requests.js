@@ -63,39 +63,45 @@ function initFormSubmission() {
         const heardFrom = Array.from(heardCheckboxes).map(cb => cb.value);
 
         // Build Payload
-        const formData = {
-            firstName,
-            lastName,
-            email,
-            eventDateTime,
-            phone: form.querySelector('[name="phone"]').value,
-            organization: form.querySelector('[name="organization"]').value,
-            pastorName: form.querySelector('[name="pastorName"]').value,
-            purpose,
-            purposeOther: form.querySelector('[name="purposeOther"]').value,
-            attendees: form.querySelector('[name="attendees"]').value,
-            heardFrom,
-            heardOther: form.querySelector('[name="heardOther"]').value,
-            speakingLength: form.querySelector('[name="speakingLength"]').value,
-            website: form.querySelector('[name="website"]').value,
-            eventAddress: form.querySelector('[name="eventAddress"]').value,
-            eventCityState: form.querySelector('[name="eventCityState"]').value,
-            details: form.querySelector('[name="details"]').value
-        };
+    const formData = {
+        firstName,
+        lastName,
+        email,
+        eventDateTime,
+        phone: form.querySelector('[name="phone"]').value,
+        organization: form.querySelector('[name="organization"]').value,
+        pastorName: form.querySelector('[name="pastorName"]').value,
+        purpose,
+        purposeOther: form.querySelector('[name="purposeOther"]').value,
+        attendees: form.querySelector('[name="attendees"]').value,
+        heardFrom,
+        heardOther: form.querySelector('[name="heardOther"]').value,
+        speakingLength: form.querySelector('[name="speakingLength"]').value,
+        website: form.querySelector('[name="website"]').value,
+        eventAddress: form.querySelector('[name="eventAddress"]').value,
+        eventCityState: form.querySelector('[name="eventCityState"]').value,
+        details: form.querySelector('[name="details"]').value
+    };
 
-        const submitBtn = form.querySelector('.speaking-btn-submit');
-        const originalBtnText = submitBtn.innerText;
-        submitBtn.disabled = true;
-        submitBtn.innerText = 'SENDING...';
+    const submitBtn = form.querySelector('.speaking-btn-submit');
+    const originalBtnText = submitBtn.innerText;
+    submitBtn.disabled = true;
+    submitBtn.innerText = 'SENDING...';
 
-        try {
-            const response = await fetch('/api/speaking-request', {
-                method: 'POST',
-                headers: {
-                    'Content-Type': 'application/json'
-                },
-                body: JSON.stringify(formData)
-            });
+    // IMPORTANT: When deployed on GitHub Pages, 'localhost' won't work.
+    // You need to replace this with your deployed backend URL (e.g., from Render, Vercel, Heroku).
+    // For local development, 'http://localhost:3000' is fine.
+    const isLocal = window.location.hostname === 'localhost' || window.location.hostname === '127.0.0.1';
+    const API_URL = isLocal ? 'http://localhost:3000/api/speaking-request' : 'https://YOUR_BACKEND_APP_URL.onrender.com/api/speaking-request'; 
+
+    try {
+        const response = await fetch(API_URL, {
+            method: 'POST',
+            headers: {
+                'Content-Type': 'application/json'
+            },
+            body: JSON.stringify(formData)
+        });
 
             const result = await response.json();
 
