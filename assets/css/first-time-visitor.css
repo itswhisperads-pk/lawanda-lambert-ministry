@@ -29,7 +29,7 @@
     content: '';
     position: absolute;
     top: 0; left: 0; width: 100%; height: 100%;
-    background-color: rgba(154, 123, 47, 0.7); /* Gold tint */
+    background-color: rgba(154, 123, 47, 0.4); /* Gold tint */
     z-index: 1;
 }
 

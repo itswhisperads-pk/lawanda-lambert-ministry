@@ -219,8 +219,8 @@ ul {
     left: 0;
     width: 100%;
     height: 100%;
-    background: var(--color-overlay);
-    mix-blend-mode: multiply; /* Helps blend warm tones */
+    background-color: rgba(154, 123, 47, 0.4); /* Gold tint */
+    mix-blend-mode: screen; /* Helps blend warm tones */
 }
 
 /* Hero Content */
@@ -415,7 +415,7 @@ ul {
    margin: 0 auto; 
    max-width: 720px; 
    font-size: clamp(16px, 1.4vw, 22px); 
-   line-height: 1.5; 
+   line-height: 1.2; 
    opacity: .95; 
  } 
  
