@@ -26,8 +26,8 @@
 .event-hero-overlay {
   position: absolute;
   inset: 0;
-  background-color: rgba(154, 123, 47, 0.4); /* Gold tint */
-  mix-blend-mode: multiply;
+  background-color: rgba(255, 255, 255, 0.4);
+  mix-blend-mode: screen;
   z-index: 1;
 }
 .event-hero-inner {
@@ -146,4 +146,3 @@
     grid-template-columns: 1fr;
   }
 }
-
