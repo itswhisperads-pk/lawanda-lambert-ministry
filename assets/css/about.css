@@ -238,6 +238,21 @@
     justify-content: center;
 }
 
+.about-avatar {
+    border-radius: 50%;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.about-staff-card .about-avatar--staff {
+    width: 200px;
+    height: 200px;
+    margin-bottom: 1.5rem;
+    background: rgba(255, 255, 255, 0.08);
+    border: 3px solid rgba(255, 255, 255, 0.1);
+}
+
 .about-staff-card img {
     width: 200px;
     height: 200px;
@@ -272,6 +287,14 @@
     gap: 2rem;
     margin-top: 3rem;
     justify-content: center;
+}
+
+.about-board-card .about-avatar--board {
+    width: 180px;
+    height: 180px;
+    margin-bottom: 1rem;
+    background: rgba(255, 255, 255, 0.18);
+    border: 3px solid rgba(255, 255, 255, 0.2);
 }
 
 .about-board-card img {

@@ -26,7 +26,7 @@
 .event-hero-overlay {
   position: absolute;
   inset: 0;
-  background-color: rgba(154, 123, 47, 0.4);
+  background-color: rgba(154, 123, 47, 0.4); /* Gold tint */
   mix-blend-mode: multiply;
   z-index: 1;
 }
