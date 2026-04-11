@@ -201,6 +201,8 @@ ul {
 .brand-sub {
     font-size: 0.5rem;
     letter-spacing: 0.3em;
+    font-weight: bold;
+    line-height: 2;
     text-align: center;
 }
 
@@ -255,22 +257,26 @@ ul {
     animation: fadeIn 1.2s ease-out;
 }
 
+
+
 .hero-headline {
     font-size: 5rem;
+    margin-top: clamp(200px, 8vh, 140px);
     font-weight: var(--font-weight-heavy);
     text-transform: uppercase;
     letter-spacing: 0.05em;
     margin-bottom: 1rem;
-    text-shadow: 0 4px 10px rgba(0,0,0,0.3);
+    text-shadow: 0 4px 10px rgba(0,0,0,0.2);
 }
 
 .hero-subheadline {
-    font-size: 1.25rem;
+    font-size: 1.1rem;
     font-weight: var(--font-weight-medium);
     text-transform: uppercase;
+    font-weight: bold;
     letter-spacing: 0.1em;
-    opacity: 0.9;
-    text-shadow: 0 2px 5px rgba(0,0,0,0.3);
+    text-shadow: 0 4px 10px rgba(0,0,0,1);
+    white-space: pre-line;
 }
 
 @keyframes fadeIn {

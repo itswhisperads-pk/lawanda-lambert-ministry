@@ -15,7 +15,7 @@ const SiteConfig = {
         right: [   
             { label: "Prayer Request", href: "prayer-request.html" },
             { label: "Events", href: "events.html" },
-            { label: "Sermons", href: "sermons.html" },
+           //    { label: "Sermons", href: "sermons.html" },
           //  { label: "Ministries", href: "ministries.html" },
           //  { label: "Volunteer", href: "volunteer.html" },
             { label: "Give", href: "give.html" },
@@ -24,7 +24,8 @@ const SiteConfig = {
     },
     hero: {
         headline: "WELCOME",
-        subheadline: "JOIN US SUNDAY FROM 2 PM to 4 PM "
+        subheadline: "Join us 2nd, 3rd, and 4th Sunday’s 2 p.m. to 4 p.m. (in Person)\n1st Sunday’s by Zoom"
+        
     }
 };
 
