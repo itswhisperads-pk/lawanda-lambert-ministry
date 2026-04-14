@@ -319,7 +319,7 @@ ul {
  
  .link-grid{ 
    display: grid; 
-   grid-template-columns: repeat(3, 1fr); 
+   grid-template-columns: repeat(2, 1fr); 
    gap: clamp(18px, 2.2vw, 34px); 
    align-items: stretch; 
  } 
@@ -636,6 +636,18 @@ ul {
 
     .hero {
         height: 70vh; /* Mobile Height */
+    }
+
+    #hero-section {
+        align-items: flex-start;
+    }
+
+    #hero-section .hero-content {
+        margin-top: clamp(360px, 34vh, 420px);
+    }
+
+    #hero-section .hero-headline {
+        margin-top: 0;
     }
 
     .hero-headline {
