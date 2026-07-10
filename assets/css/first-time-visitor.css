@@ -94,6 +94,33 @@
     padding: 2rem;
 }
 
+.new-service-details {
+    display: grid;
+    gap: 1.75rem;
+}
+
+.new-grid-time .new-service-block p {
+    margin: 0;
+    font-size: 1.25rem;
+    line-height: 1.5;
+    opacity: 1;
+}
+
+.new-service-block {
+    display: grid;
+    gap: 0.45rem;
+}
+
+.new-service-block + .new-service-block {
+    border-top: 1px solid rgba(255, 255, 255, 0.45);
+    padding-top: 1.5rem;
+}
+
+.new-grid-time .new-service-time {
+    font-size: 1.5rem;
+    font-weight: 800;
+}
+
 /* Bottom Left: Directions */
 .new-grid-directions {
     background-color: var(--new-black);
